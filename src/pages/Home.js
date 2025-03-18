@@ -1,8 +1,8 @@
 import supabase from "../config/supabaseClient"
 import { useEffect, useState } from "react"
 
-import SmoothieCard from "../components/SmoothieCard";
-
+// components
+import SmoothieCard from "../components/SmoothieCard"
 const Home = () => {
   const [fetchError, setFetchError] = useState(null);
   const [smoothies, setSmoothies] = useState(null);
@@ -38,18 +38,18 @@ const Home = () => {
       {fetchError && (<p>{fetchError}</p>)}
       {smoothies && (
         <div className="smoothies">
-        {/* order using buttons */}
-        <div className="smoothie-grid">
-          {smoothies.map((smoothie) => (
-            
-            <SmoothieCard key={smoothie.id} smoothie={smoothie} />
-          ))}
+          
+          <div className="smoothie-grid">
+            {smoothies.map((smoothie) => (
+              <SmoothieCard key={smoothie.id} smoothie={smoothie}/>
+            ))}
+          </div>
         </div>
-        </div>
-        )}
-
+      )}
     </div>
   );
 }
+
+
 
 export default Home

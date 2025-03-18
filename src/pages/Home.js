@@ -28,7 +28,7 @@ const Home = () => {
 
 
     }
-    fetchSmmothies() //function call
+    fetchSmoothies() //function call
 
   }, [])
 
